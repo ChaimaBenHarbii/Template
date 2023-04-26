@@ -1,0 +1,119 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Ajouter profil</h5>
+        </div>
+        <div class="card-body">
+          <div class="registration-form">
+            <form [formGroup]="registerForm">
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Prénom</label>
+                    <input type="text" class="form-control" placeholder="prénom">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" class="form-control" placeholder="nom">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Adresse email</label>
+                    <input type="email" class="form-control" placeholder="email">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Numéro de téléphone</label>
+                    <input type="tel" class="form-control" placeholder="numéro de téléphone">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>Adresse</label>
+                    <input type="text" class="form-control" placeholder="adresse">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>CIN</label>
+                    <input type="text" class="form-control" placeholder="CIN">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <!-- <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>À propos de vous</label>
+                  <textarea rows="4" cols="80" class="form-control"
+                    placeholder="Entrez une description de vous-même"></textarea>
+                </div>
+              </div>
+            </div> -->
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label for="zone-select">Titre</label>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <mat-select class="form-control" id="zone-select">
+                          <mat-option *ngFor="let titre of titres" [value]="titre">
+                            {{titre}}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label for="zone-select">Zone</label>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <mat-select class="form-control" id="zone-select">
+                          <mat-option *ngFor="let zone of zones" [value]="zone">
+                            {{zone}}
+                          </mat-option>
+                        </mat-select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Date d'inscription</label>
+                    <input type="date" class="form-control" placeholder="date d'inscription">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <button class="btn btn-primary" id="bouton" type="submit">Ajouter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    #bouton {
+      background-color: #0047AB;
+      float: right;
+    }
+  </style>
